@@ -101,7 +101,7 @@ fun FormIsian(
                             .padding(all = 25.dp),
                         onClick = onSubmitBtnClick
                     ) {
-                        Text(text = "Submit")
+                        Text(stringResource(id = R.string.submit))
                     }
                 }
             }
