@@ -91,8 +91,18 @@ fun FormIsian(
                         label = { Text(text = "Alamat") },
                         onValueChange = {}
                     )
+                    // Jarak (Spacer)
+                    Spacer(modifier = Modifier.height(30.dp))
+
+                    // Tombol Submit
+                    Button(
+                        modifier = Modifier
+                            .fillMaxWidth(fraction = 1f)
+                            .padding(all = 25.dp),
+                        onClick = onSubmitBtnClick
+                    ) {
+                        Text(text = "Submit")
+                    }
                 }
             }
         }
-    }
-}
