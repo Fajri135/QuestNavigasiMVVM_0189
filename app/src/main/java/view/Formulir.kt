@@ -26,27 +26,26 @@ import com.example.newpertemuan6.R
 @Composable
 fun FormIsian(
     jenisK: List<String> = listOf("Laki-Laki", "Perempuan"),
-    onSubmitBtnClick: () -> Unit
-){
-    Scaffold (modifier = Modifier,
+    onSubmitBtnClick: () -> Unit = {}
+) {
+    Scaffold(
+        modifier = Modifier,
         topBar = {
             TopAppBar(
-                title = {Text(stringResource(id = R.string.home), color = Color.White)},
+                title = {
+                    Text(
+                        text = stringResource(id = R.string.home),
+                        color = Color.White
+                    )
+                },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
                     containerColor = colorResource(id = R.color.teal_700)
                 )
             )
         }
-    ){ isiRuang ->
-        Column(modifier = Modifier.padding(paddingValues = isiRuang),
+    ) { isiRuang ->
+        Column(
+            modifier = Modifier.padding(paddingValues = isiRuang),
             verticalArrangement = Arrangement.Top,
-            horizontalAlignment = Alignment.CenterHorizontally) {
-            OutlinedTextField(
-                value = "",
-                singleLine = true,
-                modifier = Modifier
-                    .padding(top = 20.dp)
-            ).width(250.dp),
-            label = { Text(text = "Nama Lengkap") },
-            onValueChange = {}
-            )
+            horizontalAlignment = Alignment.CenterHorizontally
+        )
