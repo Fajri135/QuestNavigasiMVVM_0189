@@ -76,6 +76,13 @@ fun FormIsian(
                         )
                         Text(text = item)
                     }
+                    HorizontalDivider(
+                        modifier = Modifier
+                            .padding(all = 20.dp)
+                            .width(250.dp),
+                        thickness = 1.dp,
+                        color = Color.Red
+                    )
                 }
             }
         }
